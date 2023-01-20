@@ -3,7 +3,8 @@ export default function createHomepage() {
 
   // Create an image element
   const img = document.createElement('img');
-  img.src = 'path/to/image.jpg';
+  img.src =
+    'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content12357.jpg';
   img.alt = 'Restaurant Image';
   content.appendChild(img);
 
@@ -15,6 +16,6 @@ export default function createHomepage() {
   // Create some copy about the restaurant
   const copy = document.createElement('p');
   copy.innerHTML =
-    'Our restaurant is a wonderful place to enjoy delicious food and great company. We offer a wide variety of dishes to suit all tastes, and our friendly staff are always on hand to help you make the most of your visit.';
+    'Our restaurant is a wonderful place to enjoy delicious food and great company.<br> We offer a wide variety of dishes to suit all tastes, and our friendly staff are always on hand to help you make the most of your visit.';
   content.appendChild(copy);
 }

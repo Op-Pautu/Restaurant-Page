@@ -1,2 +1,3 @@
-import { content } from 'index.js';
+import createHomepage from './homepage.js';
+createHomepage();
 console.log('hi');
