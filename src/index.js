@@ -1,1 +1,2 @@
-console.log('hi')
+import { content } from 'index.js';
+console.log('hi');
