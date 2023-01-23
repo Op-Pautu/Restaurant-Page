@@ -1,21 +1,39 @@
-export default function createHomepage() {
-  const content = document.getElementById('content');
-
-  // Create an image element
-  const img = document.createElement('img');
-  img.src =
-    'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content12357.jpg';
-  img.alt = 'Restaurant Image';
-  content.appendChild(img);
+import restaurantImage from './assets/restaurant-image.jpg';
+export function createHomepage() {
+  const contentDiv = document.getElementById('content');
+  //Remove any DOM existing children if present
+  contentDiv.replaceChildren();
 
   // Create a headline element
   const headline = document.createElement('h1');
-  headline.innerHTML = 'Welcome to Our Restaurant';
-  content.appendChild(headline);
+  headline.textContent = "Welcome to Op's Restaurant";
+  headline.classList.add('landing-title');
+  contentDiv.appendChild(headline);
 
-  // Create some copy about the restaurant
-  const copy = document.createElement('p');
-  copy.innerHTML =
-    'Our restaurant is a wonderful place to enjoy delicious food and great company.<br> We offer a wide variety of dishes to suit all tastes, and our friendly staff are always on hand to help you make the most of your visit.';
-  content.appendChild(copy);
+  // DOM for landing page top image
+  const topImage = document.createElement('img');
+  topImage.classList.add('image');
+  topImage.src = restaurantImage;
+  topImage.alt = 'Image of Restaurant';
+  contentDiv.appendChild(topImage);
+
+  // DOM for p tag #1
+  const para1 = document.createElement('p');
+  para1.classList.add('landing-page-copy');
+  para1.textContent =
+    'This is an upscale restaurant that touts its elegance and spacious dining/lounge area.';
+  contentDiv.appendChild(para1);
+
+  // DOM for p tag #2
+  const para2 = document.createElement('p');
+  para2.classList.add('landing-page-copy');
+  para2.textContent =
+    'Attire required for this facility is business casual at a minimum, please!';
+  contentDiv.appendChild(para2);
+
+  // DOM for p tag #3
+  const para3 = document.createElement('p');
+  para3.classList.add('landing-page-copy');
+  para3.textContent = 'Thanks, Management';
+  contentDiv.appendChild(para3);
 }
